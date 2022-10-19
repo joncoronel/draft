@@ -3,6 +3,7 @@ import classes from "./Navigation.module.scss";
 import { FaRegMoon } from "react-icons/fa";
 
 import { useState, useEffect, useRef } from "react";
+import React from "react";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
