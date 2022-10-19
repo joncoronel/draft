@@ -37,17 +37,6 @@ function Home(props) {
   );
 }
 
-export async function getStaticProps() {
-  console.log("hello");
-  const fs = require("fs");
-  const length = fs.readdirSync("images/gallery/");
-  console.log(length);
 
-  return {
-    props: {
-      names: length,
-    },
-  };
-}
 
 export default Home;
