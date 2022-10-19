@@ -1,16 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
-import LandingPage from "../components/MainContent/LandingPage";
-import Contact from "../components/MainContent/Contact";
+
 import AboutUs from "../components/MainContent/AboutUs";
-import LazyRender from "../components/misc/LazyRender";
-import Gallery from "../components/MainContent/Gallery";
 
 import { useEffect, useState, useCallback } from "react";
-import Hero from "../components/MainContent/Hero";
 
-import dynamic from "next/dynamic";
 import Content from "../components/main/content";
 
 function Home(props) {
@@ -35,6 +30,8 @@ function Home(props) {
       <div className={styles.spacing}>
         <Hero />
         <AboutUs />
+
+        <Content />
       </div>
     </>
   );
