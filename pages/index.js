@@ -39,7 +39,6 @@ function Home(props) {
         <LazyRender onVisible={onVisible}>
           <Contact />
         </LazyRender>
-        <Content />
       </div>
     </>
   );
