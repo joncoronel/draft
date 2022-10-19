@@ -5,6 +5,7 @@ import LandingPage from "../components/MainContent/LandingPage";
 import Contact from "../components/MainContent/Contact";
 import AboutUs from "../components/MainContent/AboutUs";
 import LazyRender from "../components/misc/LazyRender";
+import Gallery from "../components/MainContent/Gallery";
 
 import { useEffect, useState, useCallback } from "react";
 import Hero from "../components/MainContent/Hero";
@@ -34,7 +35,10 @@ function Home(props) {
       <div className={styles.spacing}>
         <Hero />
         <AboutUs />
-        <Contact />
+        <Gallery names={value} folders={value} />
+        <LazyRender onVisible={onVisible}>
+          <Contact />
+        </LazyRender>
         <Content />
       </div>
     </>
@@ -42,8 +46,10 @@ function Home(props) {
 }
 
 export async function getStaticProps() {
+  console.log("hello");
   const fs = require("fs");
   const length = fs.readdirSync("images/gallery/");
+  console.log(length);
 
   return {
     props: {
