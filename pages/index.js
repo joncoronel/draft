@@ -35,8 +35,6 @@ function Home(props) {
       <div className={styles.spacing}>
         <Hero />
         <AboutUs />
-
-        <Content />
       </div>
     </>
   );
