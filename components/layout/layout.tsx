@@ -8,6 +8,7 @@ import {
 import styles from "./layout.module.scss";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import React from "react";
 
 function Layout(props: {
   children:

@@ -1,12 +1,26 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
-import { useState, useCallback } from "react";
+import LandingPage from "../components/MainContent/LandingPage";
+import Contact from "../components/MainContent/Contact";
+import AboutUs from "../components/MainContent/AboutUs";
+import LazyRender from "../components/misc/LazyRender";
+
+import { useEffect, useState, useCallback } from "react";
+import Hero from "../components/MainContent/Hero";
+
+import dynamic from "next/dynamic";
 import Content from "../components/main/content";
 
-export default function Home(props) {
+function Home(props) {
   const [visible, setVisible] = useState(false);
   const onVisible = useCallback(() => setVisible(true), []);
+  useEffect(() => {
+    const onTouchStart = () => {
+      return null;
+    };
+    document.addEventListener("touchstart", onTouchStart, { passive: true });
+  });
 
   const value = props.names;
 
@@ -18,8 +32,24 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.spacing}>
+        <Hero />
+        <AboutUs />
+        <Contact />
         <Content />
       </div>
     </>
   );
 }
+
+export async function getStaticProps() {
+  const fs = require("fs");
+  const length = fs.readdirSync("images/gallery/");
+
+  return {
+    props: {
+      names: length,
+    },
+  };
+}
+
+export default Home;
