@@ -28,7 +28,6 @@ function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.spacing}>
-        <Hero />
         <AboutUs />
 
         <Content />
@@ -36,7 +35,5 @@ function Home(props) {
     </>
   );
 }
-
-
 
 export default Home;
