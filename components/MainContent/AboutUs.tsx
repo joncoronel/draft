@@ -1,6 +1,5 @@
 import classes from "./AboutUs.module.scss";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
-import Map from "../Map";
+
 import { BsFillSpeakerFill } from "react-icons/bs";
 import { MdPower } from "react-icons/md";
 
