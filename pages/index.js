@@ -28,8 +28,8 @@ function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.spacing}>
-        <Content />
         <AboutUs />
+        <Content />
       </div>
     </>
   );
