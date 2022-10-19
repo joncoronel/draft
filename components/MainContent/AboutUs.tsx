@@ -24,20 +24,16 @@ export default function AboutUs() {
       </div>
       <div className={classes.rowItems}>
         <div className={classes.containerBox}>
-          <BsFillSpeakerFill className={classes.containerImage} />
           <h4>Car Audio</h4>
         </div>
 
         <div className={classes.containerBox}>
-          <GiCarWheel className={classes.containerImage} />
           <h4>Wheels</h4>
         </div>
         <div className={classes.containerBox}>
-          <RiAlarmWarningFill className={classes.containerImage} />
           <h4>Alarms</h4>
         </div>
         <div className={classes.containerBox}>
-          <MdPower className={classes.containerImage} />
           <h4>
             Custom
             <br />

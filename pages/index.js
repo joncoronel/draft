@@ -29,6 +29,7 @@ function Home(props) {
       </Head>
       <div className={styles.spacing}>
         <Content />
+        <AboutUs />
       </div>
     </>
   );
